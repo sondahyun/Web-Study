@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 양식</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <form action="process_form.php" method="post">
+        <h2>로그인</h2>
+        <hr style="width:50%;">
+        <br>
+        <!-- <label for="name">아이디</label> -->
+        <input class="text" type="text" name="id" placeholder="아이디" required>
+        <br>
+        <!-- <label for="email">비밀번호</label> -->
+        <input class="text" type="password" name="password" placeholder="비밀번호" required>
+        <br>
+        <input class="button" type="submit" value="로그인"> 
+        <br>
+        <p><a href="https://www.naver.com/">회원가입 </a> | <a href="https://www.naver.com/"> 아이디/비밀번호 찾기</a></p>
+        <br><br>
+    </form>
+   
+</body>
+</html>

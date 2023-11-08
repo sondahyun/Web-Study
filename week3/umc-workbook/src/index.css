@@ -1,0 +1,12 @@
+.app-container {
+  display: flex;
+}
+
+.movie-container {
+  width: 250px;
+  border: 1px solid red;
+}
+
+.movie-container img {
+  max-width: 100%;
+}

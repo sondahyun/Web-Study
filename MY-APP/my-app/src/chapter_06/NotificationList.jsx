@@ -21,23 +21,25 @@ class NotificationList extends React.Component {
         super(props);
 
         this.state = {
+            //notifications라는 이름의 빈 배열을 state에 넣은 것 
             notification: [], //생성자에서는 앞으로 사용할 데이터를 state에 넣어서 초기화함 
         };
     }
 
     componentDidMount() { //생명주기 함수 
+        //알림데이터 배열 (reserved notifications)로 부터 알림 데이터를 하나씩 가져와서 state에 있는 notifications배열에 넣고 업데이트 하는 것 
         const { notifications } = this.state;
         timer = setInterval(() => {
             if (notifications.length < reservedNotifications.length) {
                 const index = notifications.length;
                 notifications.push(reservedNotifications[index]);
-                this.setState({
+                this.setState({ //state 업데이트 위해서 setState 함수 사용 
                     notifications: notifications,
                 });
             } else {
                 clearInterval(timer);
             }
-        }, 1000); //1초 마다 정해진 작업 수행 
+        }, 1000); //1(1000ms)초 마다 정해진 작업 수행 
     }
 
     render() {

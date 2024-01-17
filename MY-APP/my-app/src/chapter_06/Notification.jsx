@@ -19,7 +19,7 @@ class Notification extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {};
+        this.state = {}; // state에 아무런 데이터도 가지고 있지 않음 
     }
 
     render() {
@@ -27,7 +27,7 @@ class Notification extends React.Component {
             <div style={styles.wrapper}>
                 <span style={styles.messageText}>{this.props.message}</span>
             </div>
-        )
+        );
     }
 }
 

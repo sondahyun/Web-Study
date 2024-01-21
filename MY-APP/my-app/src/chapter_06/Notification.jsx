@@ -24,14 +24,17 @@ class Notification extends React.Component {
 
   componentDidMount() {
     console.log("this.componentDidMount() called");
+    console.log(`${this.props.id} componentDidMount() called. `);
     //컴포넌트가 마운트된 후
   }
   componentDidUpdate() {
     console.log("this.componentDidUpdate() called");
+    console.log(`${this.props.id} componentDidUpdate() called. `);
     //컴포넌트가 업데이트된 후
   }
   componentWillUnmount() {
     console.log("this.componentWillUnmount() called");
+    console.log(`${this.props.id} componentWillUnmout() called. `);
     //컴포넌트 종료된 후
   }
 

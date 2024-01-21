@@ -42,6 +42,9 @@ class NotificationList extends React.Component {
           notifications: notifications,
         });
       } else {
+        this.setState({
+          notifications: [], //비우기
+        });
         clearInterval(timer);
       }
     }, 1000); //1(1000ms)초 마다 정해진 작업 수행
@@ -51,9 +54,13 @@ class NotificationList extends React.Component {
     return (
       <div>
         {this.state.notifications.map((notification) => {
-          return {
-            <Notification message={notification.message} />
-          };
+          return (
+            <Notification
+              key={notification.id}
+              id={notification.id}
+              message={notification.message}
+            />
+          );
         })}
       </div>
     );

@@ -26,7 +26,7 @@ import NotificationList from "./chapter_06/NotificationList";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CommentList />
+    <NotificationList />
   </React.StrictMode>,
   document.getElementById("root")
 );
